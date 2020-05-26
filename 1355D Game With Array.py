@@ -1,4 +1,3 @@
-
 # N: length of array
 # S: required sum
 # K: K or S-K , 2 10-2=8
@@ -11,7 +10,14 @@
 # 8=>{1 1 6} 1~4
 # 6=>{1 1 4} 1~3
 # 1=>{1}
-# 9=>{1 1 1 1 1 1 3}  (1-4)
+# 9=>{1 1 1 1 1 1 3}
+# prove:
+# S=>{1 1 1 1 1 X}  S/2
+# if S/2 > N - 1, then "YES", let K=N
+# if S/2 < N, then "NO" ?
+# must exist 1, => 1, {1,1...1, S-N-1}
+# must exist 1, => 1, {1,1...2, S-N-2}
+# {1,2,2,2} S/2 = 3
 
 def game_with_arry(N, S):
 
