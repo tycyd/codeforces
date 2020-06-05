@@ -46,38 +46,6 @@ def constant_palindrome_sum(n, k, a):
     return res
 
 
-# 2    10
-# 2       11
-#     7      13
-#     7         14
-def bs_rb(v, ar):
-    l = 0
-    h = len(ar)-1
-
-    while l < h:
-        m = (l + h)//2
-        if v <= ar[m][1]:
-            h = m
-        else:
-            l = m+1
-
-    return h
-
-
-def bs_lb(v, ar):
-    l = 0
-    h = len(ar) - 1
-
-    while l < h:
-        m = (l + h + 1) // 2
-        if v >= ar[m][0]:
-            l = m
-        else:
-            h = m - 1
-
-    return l
-
-
 if __name__ == '__main__':
     t = int(stdin.readline())
 
