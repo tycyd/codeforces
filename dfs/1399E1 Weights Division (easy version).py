@@ -4,7 +4,7 @@ from sys import stdin, stdout
 import heapq
 
 sys.setrecursionlimit(10**4)
-threading.stack_size(32*1024)
+threading.stack_size(1024*1024)
 
 #         1
 #  100  /   \ 10
