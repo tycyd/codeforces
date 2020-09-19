@@ -18,9 +18,9 @@ from sys import stdin, stdout
 #
 # MAX(b[n-1], c[0])
 # => MAX(b[0] + K, a[0] - b[0])
-# => MAX(x + K, a - x)
-# => x + K = a - x  -- optimal result
-# => x = (a - K) / 2
+# => MAX(x + K, A - x)
+# => x + K = A - x  -- optimal result
+# => x = (A - K) / 2
 
 def three_sequences(n, a_a, q_a):
     res_a = []
