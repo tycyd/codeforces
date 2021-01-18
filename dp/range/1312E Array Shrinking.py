@@ -25,7 +25,7 @@ def dfs(l, r, dp, a_a):
 
 
 def array_shrinking(n, a_a):
-    dp = [[10**6 for _ in range(n)]  for _ in range(n)]
+    dp = [[10**6 for _ in range(n)] for _ in range(n)]
     dp2 = [10**6 for _ in range(n)]
     for i in range(n):
         dp2[i] = min(i + 1, dp2[i])
