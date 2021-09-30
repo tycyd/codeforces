@@ -2,12 +2,13 @@ from sys import stdin, stdout
 
 
 def solve(n, a_a):
+    MX = max(a_a) * 2
     INF = 10000000000000
-    dp = [[INF for _ in range(2001)] for _ in range(n+1)]
+    dp = [[INF for _ in range(MX + 1)] for _ in range(n+1)]
     dp[0][0] = 0
 
     for i in range(0, n):
-        for left in range(2001):
+        for left in range(MX + 1):
             if dp[i][left] == INF:
                 continue
 
@@ -17,11 +18,11 @@ def solve(n, a_a):
 
             # add to right side
             ridx = left + a_a[i]
-            if ridx <= 2000:
+            if ridx <= MX:
                 dp[i+1][ridx] = min(dp[i+1][ridx], max(dp[i][left] - a_a[i], 0))
 
     res = 10000000000000
-    for left in range(2001):
+    for left in range(MX + 1):
         res = min(res, left + dp[n][left])
     return res
 
